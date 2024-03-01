@@ -96,7 +96,7 @@ namespace test4
             int lineHeight = TextRenderer.MeasureText("Test", richTextBox1.Font).Height;
             int newHeight = numberOfLines * lineHeight + 100;
             this.Height = newHeight + 70;
-            this.Width = 700;
+            this.Width = 650;
 
             if (motiv)
             {
@@ -108,8 +108,6 @@ namespace test4
                 label1.ForeColor = Color.White;
                 label2.BackColor = ColorTranslator.FromHtml("#151515");
                 label2.ForeColor = Color.White;
-                label3.BackColor = ColorTranslator.FromHtml("#151515");
-                label3.ForeColor = Color.White;
                 textBox1.BackColor = ColorTranslator.FromHtml("#151515");
                 textBox1.ForeColor = Color.White;
             }
@@ -123,8 +121,6 @@ namespace test4
                 label1.ForeColor = Color.Black;
                 label2.BackColor = ColorTranslator.FromHtml("#f0f0f0");
                 label2.ForeColor = Color.Black;
-                label3.BackColor = ColorTranslator.FromHtml("#f0f0f0");
-                label3.ForeColor = Color.Black;
                 textBox1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
                 textBox1.ForeColor = Color.Black;
             }
@@ -265,33 +261,7 @@ namespace test4
                 }
             }
         }
-        private void myButton_Paint3(object sender, PaintEventArgs e)
-        {
-            var buttonRect = button3.ClientRectangle;
 
-            e.Graphics.FillRectangle(Brushes.SkyBlue, buttonRect);
-
-            Image image = Properties.Resources.motiv;
-
-            int imageX = 5;
-            int imageY = (buttonRect.Height - image.Height) / 2;
-            Rectangle imageRect = new Rectangle(imageX, imageY, image.Width, image.Height);
-
-            e.Graphics.DrawImage(image, imageRect);
-
-            using (Font boldFont = new Font("Arial", 10, FontStyle.Bold))
-            {
-                using (StringFormat sf = new StringFormat())
-                {
-                    sf.Alignment = StringAlignment.Center;
-                    sf.LineAlignment = StringAlignment.Center;
-
-                    var textRect = new Rectangle(imageRect.Right, buttonRect.Y, buttonRect.Width - imageRect.Right - 5, buttonRect.Height);
-
-                    e.Graphics.DrawString("Motiv", boldFont, Brushes.Black, textRect, sf);
-                }
-            }
-        }
         private void myButton_Paint4(object sender, PaintEventArgs e)
         {
             var buttonRect = button4.ClientRectangle;
@@ -309,37 +279,36 @@ namespace test4
                 }
             }
         }
-        private void myButton_Paint5(object sender, PaintEventArgs e)
+
+        private void myButton_Paint7(object sender, PaintEventArgs e)
         {
-            var buttonRect = button5.ClientRectangle;
+
+            var buttonRect = button7.ClientRectangle;
+
 
             e.Graphics.FillRectangle(Brushes.SkyBlue, buttonRect);
 
-            using (Font boldFont = new Font("Arial", 8, FontStyle.Bold))
+
+            Image image = Properties.Resources.settings3;
+
+            int imageX = 5;
+            int imageY = (buttonRect.Height - image.Height) / 2;
+            Rectangle imageRect = new Rectangle(imageX, imageY, image.Width, image.Height);
+
+            e.Graphics.DrawImage(image, imageRect);
+
+
+            using (Font boldFont = new Font("Arial", 10, FontStyle.Bold))
             {
+
                 using (StringFormat sf = new StringFormat())
                 {
                     sf.Alignment = StringAlignment.Center;
                     sf.LineAlignment = StringAlignment.Center;
 
-                    e.Graphics.DrawString("Změnit", boldFont, Brushes.Black, buttonRect, sf);
-                }
-            }
-        }
-        private void myButton_Paint6(object sender, PaintEventArgs e)
-        {
-            var buttonRect = button6.ClientRectangle;
+                    var textRect = new Rectangle(imageRect.Right, buttonRect.Y, buttonRect.Width - imageRect.Right - 5, buttonRect.Height);
 
-            e.Graphics.FillRectangle(Brushes.SkyBlue, buttonRect);
-
-            using (Font boldFont = new Font("Segoe UI", 8, FontStyle.Bold))
-            {
-                using (StringFormat sf = new StringFormat())
-                {
-                    sf.Alignment = StringAlignment.Center;
-                    sf.LineAlignment = StringAlignment.Center;
-
-                    e.Graphics.DrawString("Motiv z OS", boldFont, Brushes.Black, buttonRect, sf);
+                    e.Graphics.DrawString("Nastavení", boldFont, Brushes.Black, textRect, sf);
                 }
             }
         }
@@ -397,34 +366,25 @@ namespace test4
             richTextBox1.Top = (this.ClientSize.Height - richTextBox1.Height) / 2;
 
             button1.Top = richTextBox1.Bottom - 8;
-            button1.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) + 100;
+            button1.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) + 80;
 
             button2.Top = richTextBox1.Bottom - 8;
-            button2.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) - 140;
+            button2.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) - 50;
 
-            button3.Top = richTextBox1.Bottom - 8;
-            button3.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) - 10;
+            button4.Top = richTextBox1.Bottom + 20;
+            button4.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) + 215;
 
-            button4.Top = richTextBox1.Bottom + 5;
-            button4.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) + 235;
+            button7.Top = richTextBox1.Bottom - 8;
+            button7.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) - 180;
 
-            button5.Top = richTextBox1.Bottom + 5;
-            button5.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) - 235;
+            label1.Top = richTextBox1.Bottom + 27;
+            label1.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) - 57;
 
-            button6.Top = richTextBox1.Bottom + 30;
-            button6.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) - 2;
+            label2.Top = richTextBox1.Bottom - 30;
+            label2.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) + 190;
 
-            label1.Top = richTextBox1.Bottom + 25;
-            label1.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) - 148;
-
-            label2.Top = richTextBox1.Bottom - 45;
-            label2.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) + 210;
-
-            label3.Top = richTextBox1.Bottom - 43;
-            label3.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) - 258;
-
-            comboBox1.Top = richTextBox1.Bottom - 25;
-            comboBox1.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) + 210;
+            comboBox1.Top = richTextBox1.Bottom - 10;
+            comboBox1.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) + 190;
 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.Font = new Font("Segoe UI", 9);
@@ -436,10 +396,6 @@ namespace test4
             textBox1.Width = richTextBox1.Width;
             textBox1.Height = 15;
             textBox1.Location = new Point(richTextBox1.Location.X + 2, richTextBox1.Location.Y - textBox1.Height);
-
-            textBox2.Top = richTextBox1.Bottom - 23;
-            textBox2.Left = richTextBox1.Left + (richTextBox1.Width / 2) - (button1.Width / 2) - 255;
-            textBox2.BackColor = ColorTranslator.FromHtml("#e4e4e4");
 
             //tohle je v aktualizujSitovaSpojeni()
             richTextBox1.Font = new Font(richTextBox1.Font.Name, 15, richTextBox1.Font.Style);
@@ -458,21 +414,13 @@ namespace test4
             button2.MouseEnter += MyButton_MouseEnter;
             button2.MouseLeave += MyButton_MouseLeave;
 
-            button3.Paint += new PaintEventHandler(myButton_Paint3);
-            button3.MouseEnter += MyButton_MouseEnter;
-            button3.MouseLeave += MyButton_MouseLeave;
-
             button4.Paint += new PaintEventHandler(myButton_Paint4);
             button4.MouseEnter += MyButton_MouseEnter;
             button4.MouseLeave += MyButton_MouseLeave;
 
-            button5.Paint += new PaintEventHandler(myButton_Paint5);
-            button5.MouseEnter += MyButton_MouseEnter;
-            button5.MouseLeave += MyButton_MouseLeave;
-
-            button6.Paint += new PaintEventHandler(myButton_Paint6);
-            button6.MouseEnter += MyButton_MouseEnter;
-            button6.MouseLeave += MyButton_MouseLeave;
+            button7.Paint += new PaintEventHandler(myButton_Paint7);
+            button7.MouseEnter += MyButton_MouseEnter;
+            button7.MouseLeave += MyButton_MouseLeave;
         }
 
         //buttony
@@ -487,45 +435,7 @@ namespace test4
             label1.Text = "Zkopírováno do schránky";
             timer1.Start();
         }
-        private void button3_Click(object sender, EventArgs e)
-        {
-            motiv = !motiv;
 
-            if (motiv)
-            {
-                //tmavý motiv
-                panel1.BackColor = ColorTranslator.FromHtml("#151515");
-                richTextBox1.BackColor = ColorTranslator.FromHtml("#151515");
-                richTextBox1.ForeColor = Color.White;
-                label1.BackColor = ColorTranslator.FromHtml("#151515");
-                label1.ForeColor = Color.White;
-                label2.BackColor = ColorTranslator.FromHtml("#151515");
-                label2.ForeColor = Color.White;
-                label3.BackColor = ColorTranslator.FromHtml("#151515");
-                label3.ForeColor = Color.White;
-                textBox1.BackColor = ColorTranslator.FromHtml("#151515");
-                textBox1.ForeColor = Color.White;
-            }
-            else
-            {
-                //světlý motiv
-                panel1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
-                richTextBox1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
-                richTextBox1.ForeColor = Color.Black;
-                label1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
-                label1.ForeColor = Color.Black;
-                label2.BackColor = ColorTranslator.FromHtml("#f0f0f0");
-                label2.ForeColor = Color.Black;
-                label3.BackColor = ColorTranslator.FromHtml("#f0f0f0");
-                label3.ForeColor = Color.Black;
-                textBox1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
-                textBox1.ForeColor = Color.Black;
-            }
-
-            //uloží nastavení motivu
-            Properties.Settings.Default.motiv = motiv;
-            Properties.Settings.Default.Save();
-        }
         private void button4_Click(object sender, EventArgs e)
         {
             if (comboBox1.SelectedItem != null)
@@ -540,69 +450,11 @@ namespace test4
                 MessageBox.Show("Vyberte prosím IP adresu z nabídky.", "Upozornění", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        private void button5_Click(object sender, EventArgs e)
+
+        private void button7_Click(object sender, EventArgs e)
         {
-            //uloží nastavení timer refreshu
-            if (int.TryParse(textBox2.Text, out int intervalInSeconds))
-            {
-                Properties.Settings.Default.TimerInterval = intervalInSeconds;
-                Properties.Settings.Default.Save();
-
-                int intervalInMilliseconds = intervalInSeconds * 1000;
-
-                timer.Interval = intervalInMilliseconds;
-                odpoctoveSekundy = intervalInSeconds;
-                odpocitavac = intervalInSeconds;
-                textBox2.Text = "";
-
-                timer.Stop();
-                timer.Start();
-
-                odpoctovyTimer.Stop();
-                odpoctovyTimer.Start();
-            }
-            else
-            {
-                MessageBox.Show("Zadejte platné číslo pro interval.");
-            }
-        }
-        private void button6_Click(object sender, EventArgs e)
-        {
-            motiv = IsDarkThemeEnabled();
-
-            if (motiv)
-            {
-                //tmavý motiv
-                panel1.BackColor = ColorTranslator.FromHtml("#151515");
-                richTextBox1.BackColor = ColorTranslator.FromHtml("#151515");
-                richTextBox1.ForeColor = Color.White;
-                label1.BackColor = ColorTranslator.FromHtml("#151515");
-                label1.ForeColor = Color.White;
-                label2.BackColor = ColorTranslator.FromHtml("#151515");
-                label2.ForeColor = Color.White;
-                label3.BackColor = ColorTranslator.FromHtml("#151515");
-                label3.ForeColor = Color.White;
-                textBox1.BackColor = ColorTranslator.FromHtml("#151515");
-                textBox1.ForeColor = Color.White;
-            }
-            else
-            {
-                //světlý motiv
-                panel1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
-                richTextBox1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
-                richTextBox1.ForeColor = Color.Black;
-                label1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
-                label1.ForeColor = Color.Black;
-                label2.BackColor = ColorTranslator.FromHtml("#f0f0f0");
-                label2.ForeColor = Color.Black;
-                label3.BackColor = ColorTranslator.FromHtml("#f0f0f0");
-                label3.ForeColor = Color.Black;
-                textBox1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
-                textBox1.ForeColor = Color.Black;
-            }
-
-            Properties.Settings.Default.motiv = motiv;
-            Properties.Settings.Default.Save();
+            SettingsForm settingsForm = new SettingsForm(this); // Předáváme 'this' jako referenci na hlavní formulář
+            settingsForm.ShowDialog();
         }
 
         private bool PingGateway(string ipAddress)
@@ -687,6 +539,105 @@ namespace test4
 
             //výchozí
             return false;
+        }
+
+        //---nastavení---
+        public void ChangeMotiv()
+        {
+            motiv = !motiv;
+
+            if (motiv)
+            {
+                //tmavý motiv
+                panel1.BackColor = ColorTranslator.FromHtml("#151515");
+                richTextBox1.BackColor = ColorTranslator.FromHtml("#151515");
+                richTextBox1.ForeColor = Color.White;
+                label1.BackColor = ColorTranslator.FromHtml("#151515");
+                label1.ForeColor = Color.White;
+                label2.BackColor = ColorTranslator.FromHtml("#151515");
+                label2.ForeColor = Color.White;
+                textBox1.BackColor = ColorTranslator.FromHtml("#151515");
+                textBox1.ForeColor = Color.White;
+            }
+            else
+            {
+                //světlý motiv
+                panel1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
+                richTextBox1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
+                richTextBox1.ForeColor = Color.Black;
+                label1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
+                label1.ForeColor = Color.Black;
+                label2.BackColor = ColorTranslator.FromHtml("#f0f0f0");
+                label2.ForeColor = Color.Black;
+                textBox1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
+                textBox1.ForeColor = Color.Black;
+            }
+
+            //uloží nastavení motivu
+            Properties.Settings.Default.motiv = motiv;
+            Properties.Settings.Default.Save();
+        }
+
+        public void ChangeMotiv2()
+        {
+            motiv = IsDarkThemeEnabled();
+
+            if (motiv)
+            {
+                //tmavý motiv
+                panel1.BackColor = ColorTranslator.FromHtml("#151515");
+                richTextBox1.BackColor = ColorTranslator.FromHtml("#151515");
+                richTextBox1.ForeColor = Color.White;
+                label1.BackColor = ColorTranslator.FromHtml("#151515");
+                label1.ForeColor = Color.White;
+                label2.BackColor = ColorTranslator.FromHtml("#151515");
+                label2.ForeColor = Color.White;
+                textBox1.BackColor = ColorTranslator.FromHtml("#151515");
+                textBox1.ForeColor = Color.White;
+            }
+            else
+            {
+                //světlý motiv
+                panel1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
+                richTextBox1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
+                richTextBox1.ForeColor = Color.Black;
+                label1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
+                label1.ForeColor = Color.Black;
+                label2.BackColor = ColorTranslator.FromHtml("#f0f0f0");
+                label2.ForeColor = Color.Black;
+                textBox1.BackColor = ColorTranslator.FromHtml("#f0f0f0");
+                textBox1.ForeColor = Color.Black;
+            }
+
+            Properties.Settings.Default.motiv = motiv;
+            Properties.Settings.Default.Save();
+        }
+
+        public void RefreshRate(string text)
+        {
+            //uloží nastavení timer refreshu
+            if (int.TryParse(text, out int intervalInSeconds))
+            {
+                Properties.Settings.Default.TimerInterval = intervalInSeconds;
+                Properties.Settings.Default.Save();
+
+                int intervalInMilliseconds = intervalInSeconds * 1000;
+
+                timer.Interval = intervalInMilliseconds;
+                odpoctoveSekundy = intervalInSeconds;
+                odpocitavac = intervalInSeconds;
+                //textBox2.Text = "";
+
+                timer.Stop();
+                timer.Start();
+
+                odpoctovyTimer.Stop();
+                odpoctovyTimer.Start();
+            }
+            else
+            {
+                MessageBox.Show("Zadejte platné číslo pro interval.");
+            }
         }
 
     }

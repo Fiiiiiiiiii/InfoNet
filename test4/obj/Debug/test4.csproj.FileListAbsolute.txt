@@ -28,3 +28,4 @@ C:\Users\Honza\Desktop\praxe\test4\test4\obj\Debug\test4.csproj.GenerateResource
 C:\Users\Honza\Desktop\praxe\test4\test4\obj\Debug\test4.csproj.CoreCompileInputs.cache
 C:\Users\Honza\Desktop\praxe\test4\test4\obj\Debug\test4.exe
 C:\Users\Honza\Desktop\praxe\test4\test4\obj\Debug\test4.pdb
+C:\Users\Honza\Desktop\praxe\test4\test4\obj\Debug\test4.SettingsForm.resources

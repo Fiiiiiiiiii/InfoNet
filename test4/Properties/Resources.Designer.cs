@@ -83,6 +83,16 @@ namespace test4.Properties {
         /// <summary>
         ///   Vyhledává lokalizovaný prostředek typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap settings3 {
+            get {
+                object obj = ResourceManager.GetObject("settings3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledává lokalizovaný prostředek typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap zavrit {
             get {
                 object obj = ResourceManager.GetObject("zavrit", resourceCulture);
