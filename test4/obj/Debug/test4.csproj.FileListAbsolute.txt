@@ -1,0 +1,30 @@
+C:\Users\Honza\OneDrive - SŠINFIS\3. Ročník\Prinich\test4\test4\bin\Debug\test4.exe.config
+C:\Users\Honza\OneDrive - SŠINFIS\3. Ročník\Prinich\test4\test4\bin\Debug\test4.exe
+C:\Users\Honza\OneDrive - SŠINFIS\3. Ročník\Prinich\test4\test4\bin\Debug\test4.pdb
+C:\Users\Honza\OneDrive - SŠINFIS\3. Ročník\Prinich\test4\test4\obj\Debug\test4.csproj.AssemblyReference.cache
+C:\Users\Honza\OneDrive - SŠINFIS\3. Ročník\Prinich\test4\test4\obj\Debug\test4.Form1.resources
+C:\Users\Honza\OneDrive - SŠINFIS\3. Ročník\Prinich\test4\test4\obj\Debug\test4.Properties.Resources.resources
+C:\Users\Honza\OneDrive - SŠINFIS\3. Ročník\Prinich\test4\test4\obj\Debug\test4.csproj.GenerateResource.cache
+C:\Users\Honza\OneDrive - SŠINFIS\3. Ročník\Prinich\test4\test4\obj\Debug\test4.csproj.CoreCompileInputs.cache
+C:\Users\Honza\OneDrive - SŠINFIS\3. Ročník\Prinich\test4\test4\obj\Debug\test4.exe
+C:\Users\Honza\OneDrive - SŠINFIS\3. Ročník\Prinich\test4\test4\obj\Debug\test4.pdb
+C:\Users\Honza\Desktop\test4\test4\obj\Debug\test4.csproj.AssemblyReference.cache
+C:\Users\Honza\Desktop\test4\test4\obj\Debug\test4.Form1.resources
+C:\Users\Honza\Desktop\test4\test4\obj\Debug\test4.Properties.Resources.resources
+C:\Users\Honza\Desktop\test4\test4\obj\Debug\test4.csproj.GenerateResource.cache
+C:\Users\Honza\Desktop\test4\test4\obj\Debug\test4.csproj.CoreCompileInputs.cache
+C:\Users\Honza\Desktop\test4\test4\obj\Debug\test4.exe
+C:\Users\Honza\Desktop\test4\test4\obj\Debug\test4.pdb
+C:\Users\Honza\Desktop\test4\test4\bin\Debug\test4.exe.config
+C:\Users\Honza\Desktop\test4\test4\bin\Debug\test4.exe
+C:\Users\Honza\Desktop\test4\test4\bin\Debug\test4.pdb
+C:\Users\Honza\Desktop\praxe\test4\test4\bin\Debug\test4.exe.config
+C:\Users\Honza\Desktop\praxe\test4\test4\bin\Debug\test4.exe
+C:\Users\Honza\Desktop\praxe\test4\test4\bin\Debug\test4.pdb
+C:\Users\Honza\Desktop\praxe\test4\test4\obj\Debug\test4.csproj.AssemblyReference.cache
+C:\Users\Honza\Desktop\praxe\test4\test4\obj\Debug\test4.Form1.resources
+C:\Users\Honza\Desktop\praxe\test4\test4\obj\Debug\test4.Properties.Resources.resources
+C:\Users\Honza\Desktop\praxe\test4\test4\obj\Debug\test4.csproj.GenerateResource.cache
+C:\Users\Honza\Desktop\praxe\test4\test4\obj\Debug\test4.csproj.CoreCompileInputs.cache
+C:\Users\Honza\Desktop\praxe\test4\test4\obj\Debug\test4.exe
+C:\Users\Honza\Desktop\praxe\test4\test4\obj\Debug\test4.pdb
